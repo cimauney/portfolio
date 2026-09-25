@@ -61,44 +61,22 @@ header.hero { padding: 64px 0 60px; border-bottom: 1px solid var(--line); }
 h1 { font-family: 'Fraunces', serif; font-weight: 500; font-size: clamp(38px, 6vw, 58px); line-height: 1.05; margin: 0 0 20px; color: var(--deep); }
 .role-line { font-size: 18px; color: var(--teal); margin: 0; max-width: 46ch; }
 
-/* photo hero, used on the About/homepage */
-.hero-image {
-  position: relative;
-  height: 76vh;
-  min-height: 460px;
-  max-height: 720px;
+/* photo accent on the About/homepage — small framed image, not full-bleed */
+.hero-photo {
+  height: 280px;
   overflow: hidden;
-  border-bottom: 1px solid var(--line);
+  margin: 8px 0 0;
+  border: 1px solid var(--line);
 }
-.hero-image img {
+.hero-photo img {
   width: 100%;
   height: 100%;
   object-fit: cover;
-  object-position: 62% 50%;
+  object-position: 62% 45%;
   display: block;
 }
-.hero-image::after {
-  content: "";
-  position: absolute;
-  inset: 0;
-  background: linear-gradient(190deg, rgba(20,43,46,0.05) 30%, rgba(14,28,30,0.82) 100%);
-}
-.hero-image .hero-inner {
-  position: absolute;
-  left: 0;
-  right: 0;
-  bottom: 0;
-  padding: 0 28px 52px;
-}
-.hero-image .hero-text {
-  max-width: 760px;
-  margin: 0 auto;
-}
-.hero-image .eyebrow-map { color: var(--sand); }
-.hero-image h1 { color: var(--paper); }
-.hero-image .role-line { color: rgba(243,239,230,0.86); }
 @media (max-width: 600px) {
-  .hero-image { height: 58vh; min-height: 360px; }
+  .hero-photo { height: 200px; }
 }
 
 section { padding: 64px 0; border-bottom: 1px solid var(--line); }
