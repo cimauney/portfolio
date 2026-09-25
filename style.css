@@ -1,0 +1,118 @@
+:root {
+  --ink: #142b2e;
+  --paper: #f3efe6;
+  --deep: #1b3a3f;
+  --teal: #3c6e64;
+  --sand: #cdbb95;
+  --coral: #b1512f;
+  --line: rgba(20,43,46,0.16);
+}
+* { box-sizing: border-box; }
+html { scroll-padding-top: env(safe-area-inset-top, 0px); }
+body {
+  margin: 0;
+  font-family: 'Work Sans', sans-serif;
+  background: var(--paper);
+  color: var(--ink);
+  padding-top: env(safe-area-inset-top, 0px);
+  padding-bottom: env(safe-area-inset-bottom, 0px);
+  -webkit-font-smoothing: antialiased;
+}
+.wrap { max-width: 760px; margin: 0 auto; padding: 0 28px; }
+
+nav.top {
+  position: sticky;
+  top: env(safe-area-inset-top, 0px);
+  background: var(--paper);
+  border-bottom: 1px solid var(--line);
+  z-index: 10;
+}
+nav.top .wrap {
+  max-width: 760px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding-top: 20px;
+  padding-bottom: 20px;
+}
+nav.top .brand {
+  font-family: 'Fraunces', serif;
+  font-size: 17px;
+  color: var(--deep);
+  text-decoration: none;
+}
+nav.top ul {
+  list-style: none;
+  display: flex;
+  gap: 28px;
+  margin: 0;
+  padding: 0;
+}
+nav.top a {
+  color: var(--teal);
+  text-decoration: none;
+  font-size: 15px;
+}
+nav.top a.active { color: var(--coral); }
+nav.top a:hover { color: var(--coral); }
+
+header.hero { padding: 64px 0 60px; border-bottom: 1px solid var(--line); }
+.eyebrow-map { font-family: 'Fraunces', serif; font-size: 15px; letter-spacing: 0.04em; color: var(--teal); margin: 0 0 18px; }
+h1 { font-family: 'Fraunces', serif; font-weight: 500; font-size: clamp(38px, 6vw, 58px); line-height: 1.05; margin: 0 0 20px; color: var(--deep); }
+.role-line { font-size: 18px; color: var(--teal); margin: 0; max-width: 46ch; }
+
+section { padding: 64px 0; border-bottom: 1px solid var(--line); }
+section:last-of-type { border-bottom: none; }
+
+h2 { font-family: 'Fraunces', serif; font-weight: 500; font-size: 26px; color: var(--deep); margin: 0 0 26px; }
+
+.about p, .lead p { font-size: 18px; line-height: 1.7; max-width: 62ch; }
+
+.timeline { position: relative; }
+.timeline::before { content: ""; position: absolute; left: 0; top: 8px; bottom: 8px; width: 1px; background: var(--line); }
+.job { position: relative; padding: 0 0 52px 34px; }
+.job:last-child { padding-bottom: 0; }
+.job::before { content: ""; position: absolute; left: -4px; top: 6px; width: 9px; height: 9px; border-radius: 50%; background: var(--coral); }
+.job-title { font-family: 'Fraunces', serif; font-size: 21px; font-weight: 500; color: var(--deep); margin: 0 0 4px; }
+.job-meta { font-size: 14px; color: var(--teal); margin: 0 0 14px; }
+.job p.desc { font-size: 16px; line-height: 1.7; max-width: 62ch; margin: 0; }
+
+.project { padding: 0 0 60px; border-bottom: 1px solid var(--line); }
+.project:last-child { padding-bottom: 0; border-bottom: none; }
+.project-title { font-family: 'Fraunces', serif; font-size: 22px; font-weight: 500; color: var(--deep); margin: 0 0 6px; }
+.project-meta { font-size: 14px; color: var(--teal); margin: 0 0 14px; }
+.project p.desc { font-size: 16px; line-height: 1.7; max-width: 62ch; margin: 0 0 18px; }
+
+.media-slot {
+  border: 1px dashed var(--line);
+  border-radius: 2px;
+  padding: 18px;
+  font-size: 13px;
+  color: var(--teal);
+  background: rgba(60,110,100,0.04);
+}
+.media-slot iframe, .media-slot img {
+  width: 100%;
+  height: 420px;
+  border: 0;
+  display: block;
+  margin-bottom: 10px;
+  object-fit: cover;
+}
+
+.contact-block p { font-size: 18px; line-height: 1.7; max-width: 58ch; margin: 0 0 30px; }
+.contact-list { list-style: none; padding: 0; margin: 0; }
+.contact-list li { padding: 14px 0; border-top: 1px solid var(--line); font-size: 16px; }
+.contact-list li:last-child { border-bottom: 1px solid var(--line); }
+.contact-list a { color: var(--coral); text-decoration: none; }
+.contact-list .label { color: var(--teal); display: inline-block; width: 110px; }
+
+footer { padding: 40px 0 90px; font-size: 14px; color: var(--teal); }
+footer a { color: var(--coral); }
+
+@media (max-width: 600px) {
+  header.hero { padding: 60px 0 40px; }
+  section { padding: 40px 0; }
+  nav.top ul { gap: 16px; }
+  nav.top a { font-size: 13px; }
+}
