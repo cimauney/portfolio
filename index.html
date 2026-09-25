@@ -1,0 +1,240 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<title>GIS Portfolio</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Fraunces:opsz,wght@9..144,400;9..144,500;9..144,600&family=Work+Sans:wght@400;500;600&display=swap" rel="stylesheet">
+<style>
+  :root {
+    --ink: #142b2e;
+    --paper: #f3efe6;
+    --deep: #1b3a3f;
+    --teal: #3c6e64;
+    --sand: #cdbb95;
+    --coral: #b1512f;
+    --line: rgba(20,43,46,0.16);
+    font-family: 'Work Sans', sans-serif;
+  }
+  * { box-sizing: border-box; }
+  html { scroll-padding-top: env(safe-area-inset-top, 0px); }
+  body {
+    margin: 0;
+    background: var(--paper);
+    color: var(--ink);
+    padding-top: env(safe-area-inset-top, 0px);
+    padding-bottom: env(safe-area-inset-bottom, 0px);
+    -webkit-font-smoothing: antialiased;
+  }
+  .wrap { max-width: 760px; margin: 0 auto; padding: 0 28px; }
+
+  header.hero {
+    padding: 110px 0 70px;
+    border-bottom: 1px solid var(--line);
+  }
+  .eyebrow-map {
+    font-family: 'Fraunces', serif;
+    font-size: 15px;
+    letter-spacing: 0.04em;
+    color: var(--teal);
+    margin: 0 0 18px;
+  }
+  h1 {
+    font-family: 'Fraunces', serif;
+    font-weight: 500;
+    font-size: clamp(38px, 6vw, 58px);
+    line-height: 1.05;
+    margin: 0 0 20px;
+    color: var(--deep);
+  }
+  .role-line {
+    font-size: 18px;
+    color: var(--teal);
+    margin: 0;
+    max-width: 46ch;
+  }
+
+  section { padding: 64px 0; border-bottom: 1px solid var(--line); }
+  section:last-of-type { border-bottom: none; }
+
+  h2 {
+    font-family: 'Fraunces', serif;
+    font-weight: 500;
+    font-size: 26px;
+    color: var(--deep);
+    margin: 0 0 26px;
+  }
+
+  .about p {
+    font-size: 18px;
+    line-height: 1.7;
+    max-width: 62ch;
+    color: var(--ink);
+  }
+
+  .timeline { position: relative; }
+  .timeline::before {
+    content: "";
+    position: absolute;
+    left: 0;
+    top: 8px;
+    bottom: 8px;
+    width: 1px;
+    background: var(--line);
+  }
+  .job {
+    position: relative;
+    padding: 0 0 56px 34px;
+  }
+  .job:last-child { padding-bottom: 0; }
+  .job::before {
+    content: "";
+    position: absolute;
+    left: -4px;
+    top: 6px;
+    width: 9px;
+    height: 9px;
+    border-radius: 50%;
+    background: var(--coral);
+  }
+  .job-title {
+    font-family: 'Fraunces', serif;
+    font-size: 21px;
+    font-weight: 500;
+    color: var(--deep);
+    margin: 0 0 4px;
+  }
+  .job-meta {
+    font-size: 14px;
+    color: var(--teal);
+    margin: 0 0 16px;
+  }
+  .job p.desc {
+    font-size: 16px;
+    line-height: 1.7;
+    max-width: 62ch;
+    margin: 0 0 18px;
+  }
+
+  .map-slot {
+    border: 1px dashed var(--line);
+    border-radius: 2px;
+    padding: 18px;
+    font-size: 13px;
+    color: var(--teal);
+    background: rgba(60,110,100,0.04);
+  }
+  .map-slot iframe {
+    width: 100%;
+    height: 420px;
+    border: 0;
+    display: block;
+    margin-bottom: 10px;
+  }
+
+  footer {
+    padding: 50px 0 90px;
+    font-size: 14px;
+    color: var(--teal);
+  }
+  footer a { color: var(--coral); }
+
+  @media (max-width: 600px) {
+    header.hero { padding: 80px 0 50px; }
+    section { padding: 46px 0; }
+  }
+</style>
+</head>
+<body>
+
+<div class="wrap">
+  <header class="hero">
+    <p class="eyebrow-map">GIS &amp; Spatial Analysis</p>
+    <h1>[Your Name]</h1>
+    <p class="role-line">Geospatial work at the intersection of conservation, coastal resilience, and public infrastructure.</p>
+  </header>
+
+  <section class="about">
+    <h2>About</h2>
+    <p>I'm a GIS professional working at the intersection of geospatial technology and environmental conservation, with experience ranging from flood risk and dam safety mapping in Virginia to coastal resilience tools with NOAA and leatherback sea turtle research across the Caribbean and Pacific. Along the way, I've built a broad skill set in spatial analysis, Python scripting, web application development, and data visualization — all in service of making complex spatial data clear and useful to the people who rely on it, from state agencies to research teams to coastal communities. This portfolio highlights some of the projects and roles that have shaped that path, so take a look around and feel free to reach out if you'd like to talk more.</p>
+  </section>
+
+  <section>
+    <h2>Experience</h2>
+    <div class="timeline">
+
+      <div class="job">
+        <p class="job-title">Conservation Data Specialist</p>
+        <p class="job-meta">Virginia Department of Conservation and Recreation — Jan 2025–present</p>
+        <p class="desc">In this role, I support Virginia's dam safety and flood risk programs by building and maintaining the GIS infrastructure behind them, including the Virginia Flood Risk Information System (VFRIS) and Dam Safety Inventory System (DSIS). Day to day, that means a mix of routine data upkeep and more involved spatial analysis and application development for agency planning and reporting. I lean heavily on Python to keep workflows reproducible and cut down on manual, repetitive tasks, and I write SQL queries to pull, QA, and structure data from relational databases. I also spend a fair amount of time on the documentation side — writing metadata, user guides, and workflow notes so that the tools and data I build are actually usable by the colleagues who inherit them.</p>
+        <div class="map-slot">Embed web map here — paste your ArcGIS Online web map embed &lt;iframe&gt; code in place of this box.</div>
+      </div>
+
+      <div class="job">
+        <p class="job-title">Product Development Specialist</p>
+        <p class="job-meta">NOAA NCCOS, Coastal Resilience Branch — Sep 2023–Jan 2025</p>
+        <p class="desc">Here, I translated coastal science into products people could actually use — story maps, dashboards, and infographics aimed at helping coastal managers and stakeholders make sense of sea-level rise and resilience risk. Most of this work lived in the ArcGIS Online ecosystem (Experience Builder, Dashboards) alongside ArcGIS Pro, Python, and Adobe Illustrator for the more design-forward pieces like one-pagers. A big part of the job was translation in the literal sense — taking inundation modeling and turning it into something a non-scientist could understand at a glance — and I made sure everything I shipped, from web apps to static graphics, met Section 508 accessibility requirements. QA/QC was baked into the process throughout rather than a final step.</p>
+        <div class="map-slot">Embed web map here — e.g. Marsh Impacts of SLR or Economic Impacts of SLR story map / dashboard.</div>
+      </div>
+
+      <div class="job">
+        <p class="job-title">Graduate Researcher — Spatial Ecology of Leatherback Sea Turtles</p>
+        <p class="job-meta">St. Croix, USVI &amp; Monterey, California — Aug 2020–2024</p>
+        <p class="desc">My thesis research centered on tracking leatherback sea turtles to better understand how they use habitat during the breeding season. Working with federal and nonprofit partners, I helped deploy satellite tags on nesting females on St. Croix and followed their movements well beyond the nesting season. Analyzing that tracking data in R and ArcGIS Pro let me map out key in-water habitat areas, classify different behavioral states, and tie movement patterns to specific environmental variables.</p>
+        <div class="map-slot">Embed web map here — e.g. tag tracks or in-water habitat use map.</div>
+      </div>
+
+      <div class="job">
+        <p class="job-title">Observer</p>
+        <p class="job-meta">Upwell Turtles, Monterey, California — Jun 2021–Dec 2022</p>
+        <p class="desc">I flew aerial line-transect surveys off the coast of Monterey, spotting and logging sea turtles, marine mammals, and jellyfish. The data fed into broader assessments of species distribution and density — for turtles, cetaceans, and their prey alike — along with the oceanographic conditions shaping their habitat.</p>
+      </div>
+
+      <div class="job">
+        <p class="job-title">GIS Analyst</p>
+        <p class="job-meta">University Corporation, Monterey, California — Aug 2021–Jul 2022</p>
+        <p class="desc">For a project with the California Public Utilities Commission, I applied geostatistical methods — semivariogram modeling and kriging — in ArcGIS Pro to build raster surfaces mapping cell coverage by carrier. Beyond the analysis itself, I put together training materials and QA/QC documentation and walked the client through them directly, and I built a custom geoprocessing toolbox to speed up the workflow going forward.</p>
+      </div>
+
+      <div class="job">
+        <p class="job-title">GIS Specialist / GIS Technician</p>
+        <p class="job-meta">Timmons Group, Richmond, Virginia — Sep 2019–Feb 2021</p>
+        <p class="desc">Across these two roles, I kept client GIS databases current and accurate, turning raw field and survey data into usable spatial datasets through digitizing, coordinate geometry, and manual and automated data entry. I worked directly with clients on environmental resource management projects, which meant translating their needs into deliverables our team could execute on cleanly. I held myself to quality standards above what clients required, running both manual reviews and Data Reviewer checks, and regularly put together training materials and presentations to hand off project knowledge.</p>
+      </div>
+
+      <div class="job">
+        <p class="job-title">Teaching Assistant</p>
+        <p class="job-meta">University of Richmond, School of Professional and Continuing Studies — Feb 2019–Sep 2021</p>
+        <p class="desc">I supported instruction across GIS Fundamentals, Advanced GIS, and Field Applications courses, running hands-on demos in ArcGIS Pro, ArcGIS Online, Field Maps, Story Maps, Dashboards, and web maps. Beyond demos, I built lesson content, answered student questions during office hours and labs, and helped guide independent research projects.</p>
+      </div>
+
+      <div class="job">
+        <p class="job-title">Leatherback Sea Turtle Research Assistant</p>
+        <p class="job-meta">St. Croix Sea Turtle Project / USFWS / NOAA, Sandy Point National Wildlife Refuge — Apr–Aug 2017, 2018, 2019</p>
+        <p class="desc">This was hands-on field research at its most intense — overnight shifts tagging and genetically sampling nesting leatherback turtles, season after season. I handled the geospatial side of the project's data too, using Access, Excel, and ArcGIS to manage and QA both historic and current records, and regularly presented findings and updates to project partners and the public.</p>
+      </div>
+
+      <div class="job">
+        <p class="job-title">Research Assistant &amp; Part-Time GIS Technician</p>
+        <p class="job-meta">Department of Geography and the Environment, University of Richmond — Aug 2018–Apr 2019</p>
+        <p class="desc">I split my time between mentoring a group of eight undergraduate and high school interns — overseeing their work, resolving the inevitable conflicts, and keeping morale up — and contributing directly to faculty and student research. The bulk of my analytical work went into the Kenya Settlement Scheme Project, a partnership with the London School of Economics and Kenya's National Land Commission, where I georeferenced and digitized roughly 1,600 smallholder settlement maps. I streamlined that process using ModelBuilder, documented the methodology for collaborators, ran QA/QC on the full dataset, and produced summary reports with maps and processing notes.</p>
+      </div>
+
+      <div class="job">
+        <p class="job-title">Coral Conservation and Reef Restoration Intern</p>
+        <p class="job-meta">Coral Restoration Foundation, Key Largo, Florida — Jan–May 2018</p>
+        <p class="desc">This was hands-on marine conservation work — outplanting endangered <em>Acropora cervicornis</em> and <em>A. palmata</em> coral, maintaining offshore nurseries, and running the boats that got us there. Alongside the fieldwork, I analyzed restoration outcomes using GIS and built web applications to help the organization communicate its impact.</p>
+      </div>
+
+    </div>
+  </section>
+
+  <footer>
+    <p>[your email] &nbsp;·&nbsp; <a href="#">LinkedIn</a> &nbsp;·&nbsp; <a href="#">GitHub</a></p>
+  </footer>
+</div>
+
+</body>
+</html>
