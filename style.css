@@ -125,6 +125,14 @@ h2 { font-family: 'Fraunces', serif; font-weight: 500; font-size: 26px; color: v
 .contact-list a { color: var(--coral); text-decoration: none; }
 .contact-list .label { color: var(--teal); display: inline-block; width: 110px; }
 
+.job p.desc a, .about p a { color: var(--coral); text-decoration: underline; text-decoration-color: var(--line); text-underline-offset: 3px; }
+.job p.desc a:hover, .about p a:hover { text-decoration-color: var(--coral); }
+
+.skills-list { list-style: none; padding: 0; margin: 0; }
+.skills-list li { padding: 16px 0; border-top: 1px solid var(--line); font-size: 16px; line-height: 1.6; }
+.skills-list li:last-child { border-bottom: 1px solid var(--line); }
+.skills-list .label { display: block; font-family: 'Fraunces', serif; color: var(--deep); font-size: 15px; margin-bottom: 4px; }
+
 footer { padding: 40px 0 90px; font-size: 14px; color: var(--teal); }
 footer a { color: var(--coral); }
 
