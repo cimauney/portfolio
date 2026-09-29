@@ -123,7 +123,6 @@ h2 { font-family: 'Fraunces', serif; font-weight: 500; font-size: 26px; color: v
   line-height: 1.6;
   color: var(--teal);
   margin: 10px 0 0;
-  max-width: 62ch;
 }
 .caption a, .desc a.doc-link {
   color: var(--coral);
