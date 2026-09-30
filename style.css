@@ -142,6 +142,61 @@ h2 { font-family: 'Fraunces', serif; font-weight: 500; font-size: 26px; color: v
   display: block;
 }
 
+img.zoomable { cursor: zoom-in; }
+
+.media-thumb-pdf {
+  position: relative;
+  height: 320px;
+  border: 1px solid var(--line);
+  overflow: hidden;
+  background: rgba(20,43,46,0.03);
+}
+.media-thumb-pdf embed { width: 100%; height: 100%; display: block; pointer-events: none; }
+.pdf-click-catcher {
+  position: absolute;
+  inset: 0;
+  cursor: zoom-in;
+  background: transparent;
+}
+
+.lightbox-overlay {
+  display: none;
+  position: fixed;
+  inset: 0;
+  background: rgba(10,22,24,0.92);
+  z-index: 100;
+  padding: 40px 24px;
+  padding-top: calc(40px + env(safe-area-inset-top, 0px));
+  padding-bottom: calc(40px + env(safe-area-inset-bottom, 0px));
+  align-items: center;
+  justify-content: center;
+  cursor: zoom-out;
+}
+.lightbox-overlay.open { display: flex; }
+.lightbox-overlay img {
+  max-width: 92vw;
+  max-height: 88vh;
+  object-fit: contain;
+  border: 1px solid rgba(243,239,230,0.25);
+  display: block;
+}
+.lightbox-overlay embed {
+  width: 80vw;
+  height: 88vh;
+  border: 1px solid rgba(243,239,230,0.25);
+  cursor: default;
+}
+.lightbox-close {
+  position: fixed;
+  top: calc(18px + env(safe-area-inset-top, 0px));
+  right: 22px;
+  color: var(--paper);
+  font-family: 'Work Sans', sans-serif;
+  font-size: 14px;
+  letter-spacing: 0.04em;
+  opacity: 0.75;
+}
+
 .media-video video {
   width: 100%;
   border: 1px solid var(--line);
