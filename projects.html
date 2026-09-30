@@ -13,7 +13,7 @@
 
 <nav class="top">
   <div class="wrap">
-    <a class="brand" href="index.html">[Your Name]</a>
+    <a class="brand" href="index.html">Nina Mauney</a>
     <ul>
       <li><a href="index.html">About</a></li>
       <li><a href="experience.html">Experience</a></li>
@@ -119,9 +119,8 @@
       </div>
 
       <div class="media-block">
-        <div class="media-thumb-pdf">
-          <embed src="assets/turtle_poster.pdf" type="application/pdf">
-          <div class="pdf-click-catcher" data-pdf="assets/turtle_poster.pdf"></div>
+        <div class="media-single">
+          <img class="zoomable" src="assets/turtle_poster.png" alt="Poster presented at WSN 2022">
         </div>
         <p class="caption">Poster presented at WSN 2022 (created in PowerPoint, graphics created in Adobe Photoshop and Adobe Illustrator, maps created in ArcGIS Pro).</p>
       </div>
@@ -171,7 +170,7 @@
 
       <div class="media-block">
         <div class="iframe-wrap">
-          <iframe src="https://www.arcgis.com/apps/instant/atlas/index.html?appid=5eb86bc0786044ff97e6d326c293af0c" allowfullscreen title="Kenya smallholder settlement schemes and environmental data">iFrames are not supported on this page.</iframe>
+          <iframe src="https://www.arcgis.com/apps/instant/basic/index.html?appid=fc9f371faf524687afcd6ce84696518d" allowfullscreen title="Kenya smallholder settlement schemes and environmental data">iFrames are not supported on this page.</iframe>
         </div>
         <p class="caption">Kenya's Smallholder Settlement Schemes and environmental data (created in ArcMap, visualized in ArcGIS Online).</p>
       </div>
@@ -230,6 +229,27 @@
     <p>[your email] &nbsp;·&nbsp; <a href="contact.html">Contact</a></p>
   </footer>
 </div>
+
+<div class="ai-toast" id="ai-toast">
+    <button class="ai-toast-close" id="ai-toast-close" aria-label="Dismiss">&#10005;</button>
+    This website was built with the assistance of AI. The writing and design are my own.
+  </div>
+
+  <script>
+  (function () {
+    var seen = false;
+    try { seen = sessionStorage.getItem('aiDisclosureSeen'); } catch (e) {}
+    if (seen) return;
+    var toast = document.getElementById('ai-toast');
+    var closeBtn = document.getElementById('ai-toast-close');
+    if (!toast || !closeBtn) return;
+    toast.classList.add('show');
+    closeBtn.addEventListener('click', function () {
+      toast.classList.remove('show');
+      try { sessionStorage.setItem('aiDisclosureSeen', '1'); } catch (e) {}
+    });
+  })();
+  </script>
 
 </body>
 </html>

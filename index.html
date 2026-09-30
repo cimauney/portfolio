@@ -13,7 +13,7 @@
 
 <nav class="top">
   <div class="wrap">
-    <a class="brand" href="index.html">[Your Name]</a>
+    <a class="brand" href="index.html">Nina Mauney</a>
     <ul>
       <li><a class="active" href="index.html">About</a></li>
       <li><a href="experience.html">Experience</a></li>
@@ -26,9 +26,16 @@
 
 <div class="wrap">
   <header class="hero">
-    <p class="eyebrow-map">GIS &amp; Spatial Analysis</p>
-    <h1>[Your Name]</h1>
-    <p class="role-line">Geospatial work at the intersection of conservation, coastal resilience, and public infrastructure.</p>
+    <div class="hero-flex">
+      <div class="hero-text-block">
+        <p class="eyebrow-map">GIS &amp; Spatial Analysis</p>
+        <h1>Nina Mauney</h1>
+        <p class="role-line">Geospatial work at the intersection of conservation, coastal resilience, and public infrastructure.</p>
+      </div>
+      <div class="headshot">
+        <img src="assets/headshot.jpg" alt="Portrait of Nina Mauney">
+      </div>
+    </div>
   </header>
 
   <div class="hero-photo">
@@ -37,13 +44,34 @@
 
   <section class="about">
     <h2>About</h2>
-    <p>I'm a GIS professional working at the intersection of geospatial technology and environmental conservation, with experience ranging from flood risk and dam safety mapping in Virginia to coastal resilience tools with NOAA and leatherback sea turtle research across the Caribbean and Pacific. Along the way, I've built a broad skill set in spatial analysis, Python scripting, web application development, and data visualization — all in service of making complex spatial data clear and useful to the people who rely on it, from state agencies to research teams to coastal communities. This portfolio highlights some of the projects and roles that have shaped that path, so take a look around and feel free to reach out if you'd like to talk more.</p>
+    <p>I'm a GIS enthusiast working at the intersection of geospatial technology and environmental conservation, with experience ranging from public service, to conservation GIS, to field research and marine science. I have a broad technical skillset in spatial analysis, data visualization, and web application development. I enjoy working on teams and using creative critical thinking to solve complex problems, and I'm passionate about helping people understand and communicate their data - from government agencies, to research teams, to individuals. The portfolio displayed here highlights some of the projects and roles that I've worked on throughout my career. I'd love to connect if you have similar interests or would like to talk more!</p>
   </section>
 
   <footer>
     <p>[your email] &nbsp;·&nbsp; <a href="contact.html">Contact</a></p>
   </footer>
 </div>
+
+<div class="ai-toast" id="ai-toast">
+    <button class="ai-toast-close" id="ai-toast-close" aria-label="Dismiss">&#10005;</button>
+    This website was built with the assistance of AI. The writing and design are my own.
+  </div>
+
+  <script>
+  (function () {
+    var seen = false;
+    try { seen = sessionStorage.getItem('aiDisclosureSeen'); } catch (e) {}
+    if (seen) return;
+    var toast = document.getElementById('ai-toast');
+    var closeBtn = document.getElementById('ai-toast-close');
+    if (!toast || !closeBtn) return;
+    toast.classList.add('show');
+    closeBtn.addEventListener('click', function () {
+      toast.classList.remove('show');
+      try { sessionStorage.setItem('aiDisclosureSeen', '1'); } catch (e) {}
+    });
+  })();
+  </script>
 
 </body>
 </html>
