@@ -186,6 +186,33 @@ img.zoomable { cursor: zoom-in; }
   .hero-flex { align-items: flex-start; }
 }
 
+.contactimg {
+  width: 290px;
+  height: 220px;
+  flex-shrink: 0;
+  overflow: hidden;
+  border: 1px solid var(--line);
+}
+.contactimg img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  object-position: center 18%;
+  display: block;
+}
+.hero-flex {
+  display: flex;
+  align-items: flex-end;
+  justify-content: space-between;
+  gap: 36px;
+  flex-wrap: wrap;
+}
+.hero-flex .hero-text-block { flex: 1 1 320px; }
+@media (max-width: 600px) {
+  .contactimg { width: 2100px; height: 160px; }
+  .hero-flex { align-items: flex-start; }
+}
+
 .lightbox-overlay {
   display: none;
   position: fixed;
