@@ -27,23 +27,55 @@
 <div class="wrap">
   <header class="hero">
     <h1>Contact</h1>
-    <p class="role-line">Get in touch</p>
+    <p class="role-line">Get in touch!</p>
   </header>
 
   <section class="contact-block">
-    <p>I'm always glad to connect about GIS, conservation work, or opportunities where the two overlap. Reach out using any of the links below.</p>
+    <p>I'm always excited to chat about GIS, turtles, and/or conservation projects. Please reach out if you'd like to connect!</p>
     <ul class="contact-list">
-      <li><span class="label">Email</span> <a href="mailto:youremail@example.com">youremail@example.com</a></li>
-      <li><span class="label">LinkedIn</span> <a href="#">linkedin.com/in/yourname</a></li>
-      <li><span class="label">GitHub</span> <a href="#">github.com/yourname</a></li>
-      <li><span class="label">Resume</span> <a href="#">Download CV (PDF)</a></li>
+      <li><span class="label">Email</span> <a href="mailto:mauneynina@gmail.com">mauneynina@gmail.com</a></li>
     </ul>
+
+    <div class="media-block" style="margin-top:28px;">
+      <p class="job-meta" style="margin-bottom:10px;">Resume</p>
+      <div class="media-thumb-pdf">
+        <embed src="assets/Mauney_CV.pdf" type="application/pdf">
+        <div class="pdf-click-catcher" data-pdf="assets/Mauney_CV.pdf"></div>
+      </div>
+      <p class="caption">Click to view full screen, or <a class="doc-link" href="assets/Mauney_CV.pdf" download>download the CV (PDF)</a>.</p>
+    </div>
   </section>
 
   <footer>
     <p>Thanks for stopping by.</p>
   </footer>
 </div>
+
+<div class="lightbox-overlay" id="lightbox">
+  <span class="lightbox-close">Close ✕</span>
+  <div id="lightbox-content"></div>
+</div>
+
+<script>
+  var lightbox = document.getElementById('lightbox');
+  var lightboxContent = document.getElementById('lightbox-content');
+  function closeLightbox() {
+    lightbox.classList.remove('open');
+    lightboxContent.innerHTML = '';
+  }
+  document.querySelectorAll('.pdf-click-catcher').forEach(function (el) {
+    el.addEventListener('click', function (e) {
+      e.stopPropagation();
+      var src = el.getAttribute('data-pdf');
+      lightboxContent.innerHTML = '<embed src="' + src + '" type="application/pdf">';
+      lightbox.classList.add('open');
+    });
+  });
+  lightbox.addEventListener('click', closeLightbox);
+  document.addEventListener('keydown', function (e) {
+    if (e.key === 'Escape') closeLightbox();
+  });
+</script>
 
 <div class="ai-toast" id="ai-toast">
     <button class="ai-toast-close" id="ai-toast-close" aria-label="Dismiss">&#10005;</button>
